@@ -1,0 +1,20 @@
+{
+  "name": "piyao_pwa",
+  "version": "1.0.0",
+  "description": "捉谣记pwa测试demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "keywords": [
+    "PWA"
+  ],
+  "author": "wuhan",
+  "license": "ISC",
+  "devDependencies": {
+    "koa": "^2.6.2",
+    "koa-static": "^5.0.0",
+    "workbox-build": "^3.6.3",
+    "workbox-sw": "^3.6.3"
+  }
+}
