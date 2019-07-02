@@ -14,10 +14,10 @@
 
 ### cli工具
 
-``` js
+``` shell
 npm install -g workbox-cli
 npm install workbox-sw -D
 ```
-workbox wizard 生成配置文件 workbox-config.js；
-workbox generateSW 生成 prefetch 的 ServiceWorker JS 文件（依赖 workbox-config.js）；
-workbox injectManifest 将 prefetch 代码注入到指定的 JS 文件（依赖 workbox-config.js）；
+- workbox wizard 生成配置文件 workbox-config.js；
+- workbox generateSW 生成 prefetch 的 ServiceWorker JS 文件（依赖 workbox-config.js）；
+- workbox injectManifest 将 prefetch 代码注入到指定的 JS 文件（依赖 workbox-config.js）；
