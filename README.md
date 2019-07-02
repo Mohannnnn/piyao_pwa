@@ -1,6 +1,6 @@
 ### PWA开发中遇到的问题
 - 1.使用navigator.serviceWorker.register(...)中的路径是相对于根路径的相对路劲。
-- 2.CacheStorage
+- 2.CacheStorage(caches是CacheStorage实例化对象  window.caches.__proto__ == CacheStorage.prototype //true)
     .delete()，删除某个Cache
     .open()，打开某个Cache（打开后才能修改Cache），若没有则新建一个
     .keys()，得到所有Cache的名称
