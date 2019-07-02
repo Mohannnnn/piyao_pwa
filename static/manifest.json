@@ -1,13 +1,13 @@
 {
-  "name": "捉谣记",
-  "short_name": "捉谣记",
-  "icons": [{
-      "src": "//n.sinaimg.cn/finance/piyao/piyao-share.png",
-      "sizes": "160x160",
-      "type": "image/png"
+    "name": "捉谣记",
+    "short_name": "捉谣记",
+    "icons": [{
+        "src": "//n.sinaimg.cn/finance/piyao/piyao-share.png",
+        "sizes": "160x160",
+        "type": "image/png"
     }],
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff"
 }
