@@ -14,9 +14,8 @@ workbox.precaching.precacheAndRoute([]);
 workbox.routing.registerRoute(
     /\.html/g,
     workbox.strategies.networkFirst({
-        cacheName : 'piyao-html-cache',
-        plugins: [
-        ]
+        cacheName: 'piyao-html-cache',
+        plugins: []
     })
 );
 
@@ -26,15 +25,15 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
     /.*\.(?:js|css)/g,
     workbox.strategies.cacheFirst({
-        cacheName : 'piyao-jscss-cache',
+        cacheName: 'piyao-jscss-cache',
         plugins: [
-          new workbox.cacheableResponse.Plugin({
-            statuses: [0, 200], 
-          }),
-          new workbox.expiration.Plugin({
-            maxEntries: 60,
-            maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-          }),
+            new workbox.cacheableResponse.Plugin({
+                statuses: [0, 200],
+            }),
+            new workbox.expiration.Plugin({
+                maxEntries: 60,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+            }),
         ]
     })
 );
@@ -45,10 +44,10 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
     /.*\.(?:png|gif|jpg|jpeg|svg)/g,
     workbox.strategies.cacheFirst({
-        cacheName : 'piyao-image-cache',
+        cacheName: 'piyao-image-cache',
         plugins: [
             new workbox.cacheableResponse.Plugin({
-              statuses: [0, 200],
+                statuses: [0, 200],
             }),
             //设置图像缓存过期时间
             new workbox.expiration.Plugin({
@@ -63,15 +62,15 @@ workbox.routing.registerRoute(
  * 缓存接口数据 使用staleWhileRevalidate（非同源）或者cacheFirst（同源）
  */
 workbox.routing.registerRoute(
-    ({url , event}) => {
+    ({ url, event }) => {
         const netReg = new RegExp('/api/list/group');
-        if(netReg.test(url)){
+        if (netReg.test(url)) {
             console.log(url.href);
             return true;
         }
     },
     workbox.strategies.networkFirst({
-        cacheName : 'piyao-net-cache',
+        cacheName: 'piyao-net-cache',
         plugins: [
             //设置缓存过期时间
             new workbox.expiration.Plugin({
@@ -81,7 +80,7 @@ workbox.routing.registerRoute(
         ],
     })
 );
-  
+
 // workbox.routing.registerRoute(
 //     ({url , event}) => {
 //         const netReg = new RegExp('/api/list/group');
